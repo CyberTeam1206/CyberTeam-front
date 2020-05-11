@@ -1,4 +1,4 @@
-import React, {Component } from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 //import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
