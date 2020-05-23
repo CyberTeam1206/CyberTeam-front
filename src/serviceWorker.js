@@ -134,8 +134,5 @@ export function unregister() {
       .then(registration => {
         registration.unregister();
       })
-      .catch(error => {
-        console.error(error.message);
-      });
   }
 }
