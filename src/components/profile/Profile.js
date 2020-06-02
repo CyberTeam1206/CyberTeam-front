@@ -62,7 +62,7 @@ class Profile extends Component {
                                 onChange={this.handleImageChange}
                             />
                             <MyButton
-                                tip="Edit profile picture"
+                                tip="Змініть фото"
                                 onClick={this.handleEditPicture}
                                 btnClassName="button"
                             >
@@ -77,7 +77,7 @@ class Profile extends Component {
                                 color="primary"
                                 variant="h5"
                             >
-                                @{handle}
+                                {handle}
                             </MuiLink>
                             <hr />
                             {bio && <Typography variant="body2">{bio}</Typography>}
@@ -89,19 +89,19 @@ class Profile extends Component {
                                 </Fragment>
                             )}
                             {website && (
-                                <Fragment>
-                                    <LinkIcon color="primary" />
-                                    <a href={website} target="_blank" rel="noopener noreferrer">
-                                        {' '}
-                                        {website}
-                                    </a>
-                                    <hr />
-                                </Fragment>
-                            )}
+                            <Fragment>
+                                <LinkIcon color="primary" />
+                                <a href={website} target="_blank" rel="noopener noreferrer">
+                                    {' '}
+                                    {website}
+                                </a>
+                                <hr />
+                            </Fragment>
+                        )}
                             <CalendarToday color="primary" />{' '}
                             <span>Joined {dayjs(createdAt).format('MMM YYYY')}</span>
                         </div>
-                        <MyButton tip="Logout" onClick={this.handleLogout}>
+                        <MyButton tip="Вийти" onClick={this.handleLogout}>
                             <KeyboardReturn color="primary" />
                         </MyButton>
                         <EditDetails />
@@ -109,8 +109,8 @@ class Profile extends Component {
                 </Paper>
             ) : (
                 <Paper className={classes.paper}>
-                    <Typography variant="body2" align="center">
-                        No profile found, please login again
+                    <Typography variant="body1" align="center">
+                        Будь ласка, увійдіть або авторизуйтесь
                     </Typography>
                     <div className={classes.buttons}>
                         <Button
@@ -119,7 +119,7 @@ class Profile extends Component {
                             component={Link}
                             to="/login"
                         >
-                            Login
+                            Увійти
                         </Button>
                         <Button
                             variant="contained"
@@ -127,7 +127,7 @@ class Profile extends Component {
                             component={Link}
                             to="/signup"
                         >
-                            Sign Up
+                            Авторизуватись
                         </Button>
                     </div>
                 </Paper>

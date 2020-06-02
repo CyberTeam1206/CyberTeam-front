@@ -70,7 +70,7 @@ class PostScream extends Component {
         } = this.props;
         return (
             <Fragment>
-                <MyButton onClick={this.handleOpen} tip="Post a Scream!">
+                <MyButton onClick={this.handleOpen} tip="Допис">
                     <AddIcon />
                 </MyButton>
                 <Dialog
@@ -80,22 +80,21 @@ class PostScream extends Component {
                     maxWidth="sm"
                 >
                     <MyButton
-                        tip="Close"
+                        tip="Закрити"
                         onClick={this.handleClose}
                         tipClassName={classes.closeButton}
                     >
                         <CloseIcon />
                     </MyButton>
-                    <DialogTitle>Post a new scream</DialogTitle>
+                    <DialogTitle>Залиште ваш відгук</DialogTitle>
                     <DialogContent>
                         <form onSubmit={this.handleSubmit}>
                             <TextField
                                 name="body"
                                 type="text"
-                                label="SCREAM!!"
                                 multiline
-                                rows="3"
-                                placeholder="Scream at your fellow apes"
+                                rows="4"
+                                placeholder="Що ви б хотіли розповісти?"
                                 error={errors.body ? true : false}
                                 helperText={errors.body}
                                 className={classes.textField}
@@ -109,7 +108,7 @@ class PostScream extends Component {
                                 className={classes.submitButton}
                                 disabled={loading}
                             >
-                                Submit
+                                Опублікувати
                                 {loading && (
                                     <CircularProgress
                                         size={30}

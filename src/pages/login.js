@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import withStyles from '@material-ui/core/styles/withStyles';
 import PropTypes from 'prop-types';
-import AppIcon from '../images/logo.jpg';
+import AppIcon from '../images/logo2.png';
 import { Link } from 'react-router-dom';
 
 // MUI Stuff
@@ -15,7 +15,7 @@ import { connect } from 'react-redux';
 import { loginUser } from '../redux/actions/userActions';
 
 const styles = (theme) => ({
-    ...theme
+    ...theme.spreadThis
 });
 
 class login extends Component {
@@ -56,16 +56,13 @@ class login extends Component {
             <Grid container className={classes.form}>
                 <Grid item sm />
                 <Grid item sm>
-                    <img src={AppIcon} alt="monkey" className={classes.image} />
-                    <Typography variant="h2" className={classes.pageTitle}>
-                        Login
-                    </Typography>
+                    <img src={AppIcon} alt="logo" className={classes.image} />
                     <form noValidate onSubmit={this.handleSubmit}>
                         <TextField
                             id="email"
                             name="email"
                             type="email"
-                            label="Email"
+                            label="Введіть e-mail"
                             className={classes.textField}
                             helperText={errors.email}
                             error={errors.email ? true : false}
@@ -77,7 +74,7 @@ class login extends Component {
                             id="password"
                             name="password"
                             type="password"
-                            label="Password"
+                            label="Введіть пароль"
                             className={classes.textField}
                             helperText={errors.password}
                             error={errors.password ? true : false}
@@ -97,15 +94,16 @@ class login extends Component {
                             className={classes.button}
                             disabled={loading}
                         >
-                            Login
+                            Увійти
+
                             {loading && (
                                 <CircularProgress size={30} className={classes.progress} />
                             )}
                         </Button>
                         <br />
-                        <small>
-                            dont have an account ? sign up <Link to="/signup">here</Link>
-                        </small>
+                        <middle>
+                            Все ще не з нами? Авторизуйтесь <Link to="/signup">тут</Link>
+                        </middle>
                     </form>
                 </Grid>
                 <Grid item sm />

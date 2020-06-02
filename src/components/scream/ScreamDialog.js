@@ -22,7 +22,7 @@ import { connect } from 'react-redux';
 import { getScream, clearErrors } from '../../redux/actions/dataActions';
 
 const styles = (theme) => ({
-    ...theme,
+    ...theme.spreadThis,
     profileImage: {
         maxWidth: 200,
         height: 200,
@@ -109,7 +109,7 @@ class ScreamDialog extends Component {
                         variant="h5"
                         to={`/users/${userHandle}`}
                     >
-                        @{userHandle}
+                        {userHandle}
                     </Typography>
                     <hr className={classes.invisibleSeparator} />
                     <Typography variant="body2" color="textSecondary">
@@ -133,7 +133,7 @@ class ScreamDialog extends Component {
             <Fragment>
                 <MyButton
                     onClick={this.handleOpen}
-                    tip="Expand scream"
+                    tip="Переглянути коментарі"
                     tipClassName={classes.expandButton}
                 >
                     <UnfoldMore color="primary" />
@@ -145,7 +145,7 @@ class ScreamDialog extends Component {
                     maxWidth="sm"
                 >
                     <MyButton
-                        tip="Close"
+                        tip="Закрити"
                         onClick={this.handleClose}
                         tipClassName={classes.closeButton}
                     >

@@ -39,7 +39,7 @@ class user extends Component {
         const screamsMarkup = loading ? (
             <ScreamSkeleton />
         ) : screams === null ? (
-            <p>No screams from this user</p>
+            <p>На жаль, користувач не залишив дописів</p>
         ) : !screamIdParam ? (
             screams.map((scream) => <Scream key={scream.screamId} scream={scream} />)
         ) : (
@@ -52,15 +52,15 @@ class user extends Component {
 
         return (
             <Grid container spacing={16}>
-                <Grid item sm={8} xs={12}>
-                    {screamsMarkup}
-                </Grid>
-                <Grid item sm={4} xs={12}>
+                <Grid item lg={4} xs={10}>
                     {this.state.profile === null ? (
                         <ProfileSkeleton />
                     ) : (
                         <StaticProfile profile={this.state.profile} />
                     )}
+                </Grid>
+                <Grid item lg={8} xs={10}>
+                    {screamsMarkup}
                 </Grid>
             </Grid>
         );

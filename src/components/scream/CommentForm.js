@@ -10,7 +10,7 @@ import { connect } from 'react-redux';
 import { submitComment } from '../../redux/actions/dataActions';
 
 const styles = (theme) => ({
-    ...theme
+    ...theme.spreadThis
 });
 
 class CommentForm extends Component {
@@ -46,7 +46,7 @@ class CommentForm extends Component {
                     <TextField
                         name="body"
                         type="text"
-                        label="Comment on scream"
+                        label="Залиште ваш коментар"
                         error={errors.comment ? true : false}
                         helperText={errors.comment}
                         value={this.state.body}
@@ -60,7 +60,7 @@ class CommentForm extends Component {
                         color="primary"
                         className={classes.button}
                     >
-                        Submit
+                        Надіслати
                     </Button>
                 </form>
                 <hr className={classes.visibleSeparator} />

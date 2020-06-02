@@ -61,7 +61,7 @@ class Scream extends Component {
             <Card className={classes.card}>
                 <CardMedia
                     image={userImage}
-                    title="Profile image"
+                    title="Фото"
                     className={classes.image}
                 />
                 <CardContent className={classes.content}>
@@ -79,11 +79,11 @@ class Scream extends Component {
                     </Typography>
                     <Typography variant="body1">{body}</Typography>
                     <LikeButton screamId={screamId} />
-                    <span>{likeCount} Likes</span>
-                    <MyButton tip="comments">
+                    <span>{likeCount} вподобання</span>
+                    <MyButton tip="Коментарі">
                         <ChatIcon color="primary" />
                     </MyButton>
-                    <span>{commentCount} comments</span>
+                    <span>{commentCount} коментарі</span>
                     <ScreamDialog
                         screamId={screamId}
                         userHandle={userHandle}

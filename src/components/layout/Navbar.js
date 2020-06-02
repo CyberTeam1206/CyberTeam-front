@@ -23,7 +23,7 @@ class Navbar extends Component {
                         <Fragment>
                             <PostScream />
                             <Link to="/">
-                                <MyButton tip="Home">
+                                <MyButton tip="Головна">
                                     <HomeOutlinedIcon />
                                 </MyButton>
                             </Link>
@@ -32,13 +32,13 @@ class Navbar extends Component {
                     ) : (
                         <Fragment>
                             <Button color="inherit" component={Link} to="/login">
-                                Login
+                                Увійти
                             </Button>
                             <Button color="inherit" component={Link} to="/">
-                                Home
+                                Головна
                             </Button>
                             <Button color="inherit" component={Link} to="/signup">
-                                Sign Up
+                                Авторизація
                             </Button>
                         </Fragment>
                     )}

@@ -67,7 +67,7 @@ class EditDetails extends Component {
         return (
             <Fragment>
                 <MyButton
-                    tip="Edit Details"
+                    tip="Редагувати"
                     onClick={this.handleOpen}
                     btnClassName={classes.button}
                 >
@@ -84,11 +84,11 @@ class EditDetails extends Component {
                         <form>
                             <TextField
                                 name="bio"
-                                tpye="text"
-                                label="Bio"
+                                type="text"
+                                label="Про себе"
                                 multiline
                                 rows="3"
-                                placeholder="A short bio about yourself"
+                                placeholder="Розкажіть коротко про себе"
                                 className={classes.textField}
                                 value={this.state.bio}
                                 onChange={this.handleChange}
@@ -96,9 +96,9 @@ class EditDetails extends Component {
                             />
                             <TextField
                                 name="website"
-                                tpye="text"
-                                label="Website"
-                                placeholder="Your personal/professional website"
+                                type="text"
+                                label="Веб-сайт"
+                                placeholder="Вкажіть вебсайт"
                                 className={classes.textField}
                                 value={this.state.website}
                                 onChange={this.handleChange}
@@ -106,9 +106,9 @@ class EditDetails extends Component {
                             />
                             <TextField
                                 name="location"
-                                tpye="text"
-                                label="Location"
-                                placeholder="Where you live"
+                                type="text"
+                                label="Місцезнаходження"
+                                placeholder="Звідки ви?"
                                 className={classes.textField}
                                 value={this.state.location}
                                 onChange={this.handleChange}
@@ -118,10 +118,10 @@ class EditDetails extends Component {
                     </DialogContent>
                     <DialogActions>
                         <Button onClick={this.handleClose} color="primary">
-                            Cancel
+                            Скасувати
                         </Button>
                         <Button onClick={this.handleSubmit} color="primary">
-                            Save
+                            Зберегти
                         </Button>
                     </DialogActions>
                 </Dialog>

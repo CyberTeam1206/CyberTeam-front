@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import withStyles from '@material-ui/core/styles/withStyles';
 import PropTypes from 'prop-types';
-import AppIcon from '../images/logo.jpg';
+import AppIcon from '../images/logo2.png';
 import { Link } from 'react-router-dom';
 
 // MUI Stuff
@@ -15,7 +15,7 @@ import { connect } from 'react-redux';
 import { signupUser } from '../redux/actions/userActions';
 
 const styles = (theme) => ({
-    ...theme
+    ...theme.spreadThis
 });
 
 class signup extends Component {
@@ -64,15 +64,12 @@ class signup extends Component {
                 <Grid item sm />
                 <Grid item sm>
                     <img src={AppIcon} alt="monkey" className={classes.image} />
-                    <Typography variant="h2" className={classes.pageTitle}>
-                        SignUp
-                    </Typography>
                     <form noValidate onSubmit={this.handleSubmit}>
                         <TextField
                             id="email"
                             name="email"
                             type="email"
-                            label="Email"
+                            label="Введіть ваш е-mail"
                             className={classes.textField}
                             helperText={errors.email}
                             error={errors.email ? true : false}
@@ -84,7 +81,7 @@ class signup extends Component {
                             id="password"
                             name="password"
                             type="password"
-                            label="Password"
+                            label="Введіть пароль"
                             className={classes.textField}
                             helperText={errors.password}
                             error={errors.password ? true : false}
@@ -96,7 +93,7 @@ class signup extends Component {
                             id="confirmPassword"
                             name="confirmPassword"
                             type="password"
-                            label="Confirm Password"
+                            label="Підтвердіть ваш пароль"
                             className={classes.textField}
                             helperText={errors.confirmPassword}
                             error={errors.confirmPassword ? true : false}
@@ -108,7 +105,7 @@ class signup extends Component {
                             id="handle"
                             name="handle"
                             type="text"
-                            label="Handle"
+                            label="Ваше імя"
                             className={classes.textField}
                             helperText={errors.handle}
                             error={errors.handle ? true : false}
@@ -128,15 +125,15 @@ class signup extends Component {
                             className={classes.button}
                             disabled={loading}
                         >
-                            SignUp
+                            Авторизуватись
                             {loading && (
                                 <CircularProgress size={30} className={classes.progress} />
                             )}
                         </Button>
                         <br />
-                        <small>
-                            Already have an account ? Login <Link to="/login">here</Link>
-                        </small>
+                        <middle>
+                            Вже авторизовані? Увійдіть <Link to="/login">тут</Link>
+                        </middle>
                     </form>
                 </Grid>
                 <Grid item sm />

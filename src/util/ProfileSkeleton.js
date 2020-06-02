@@ -10,7 +10,7 @@ import LinkIcon from '@material-ui/icons/Link';
 import CalendarToday from '@material-ui/icons/CalendarToday';
 
 const styles = (theme) => ({
-    ...theme,
+    ...theme.spreadThis,
     handle: {
         height: 20,
         backgroundColor: theme.palette.primary.main,
@@ -19,7 +19,7 @@ const styles = (theme) => ({
     },
     fullLine: {
         height: 15,
-        backgroundColor: 'rgba(0,0,0,0.6)',
+        backgroundColor: 'rgb(105,132,156)',
         width: '100%',
         marginBottom: 10
     },
@@ -46,11 +46,11 @@ const ProfileSkeleton = (props) => {
                     <div className={classes.fullLine} />
                     <div className={classes.fullLine} />
                     <hr />
-                    <LocationOn color="primary" /> <span>Location</span>
+                    <LocationOn color="primary" /> <span>Місцезнаходження</span>
                     <hr />
                     <LinkIcon color="primary" /> https://website.com
                     <hr />
-                    <CalendarToday color="primary" /> Joined date
+                    <CalendarToday color="primary" /> Дата приєднання
                 </div>
             </div>
         </Paper>

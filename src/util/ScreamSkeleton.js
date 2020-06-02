@@ -9,7 +9,7 @@ import CardContent from '@material-ui/core/CardContent';
 import withStyles from '@material-ui/core/styles/withStyles';
 
 const styles = (theme) => ({
-    ...theme,
+    ...theme.spreadThis,
     card: {
         display: 'flex',
         marginBottom: 20
@@ -32,7 +32,7 @@ const styles = (theme) => ({
     date: {
         height: 14,
         width: 100,
-        backgroundColor: 'rgba(0,0,0, 0.3)',
+        backgroundColor: 'rgb(178,72,82)',
         marginBottom: 10
     },
     fullLine: {

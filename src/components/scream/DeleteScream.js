@@ -41,7 +41,7 @@ class DeleteScream extends Component {
         return (
             <Fragment>
                 <MyButton
-                    tip="Delete Scream"
+                    tip="Видалити допис"
                     onClick={this.handleOpen}
                     btnClassName={classes.deleteButton}
                 >
@@ -54,14 +54,14 @@ class DeleteScream extends Component {
                     maxWidth="sm"
                 >
                     <DialogTitle>
-                        Are you sure you want to delete this scream ?
+                        Ви справді хочете видалити ваш допис?
                     </DialogTitle>
                     <DialogActions>
                         <Button onClick={this.handleClose} color="primary">
-                            Cancel
+                            Скасувати
                         </Button>
                         <Button onClick={this.deleteScream} color="secondary">
-                            Delete
+                            Підтвердити
                         </Button>
                     </DialogActions>
                 </Dialog>

@@ -10,9 +10,11 @@ import { connect } from 'react-redux';
 import { getScreams } from '../redux/actions/dataActions';
 
 class home extends Component {
+
     componentDidMount() {
         this.props.getScreams();
     }
+
     render() {
         const { screams, loading } = this.props.data;
         let recentScreamsMarkup = !loading ? (
@@ -21,13 +23,14 @@ class home extends Component {
             <ScreamSkeleton />
         );
         return (
-            <Grid container spacing={10}>
-                <Grid item sm={8} xs={12}>
-                    {recentScreamsMarkup}
-                </Grid>
-                <Grid item sm={4} xs={12}>
+            <Grid container spacing={16}>
+                <Grid item lg={4} xs={10}>
                     <Profile />
                 </Grid>
+                <Grid item lg={8} xs={10}>
+                    {recentScreamsMarkup}
+                </Grid>
+
             </Grid>
         );
     }

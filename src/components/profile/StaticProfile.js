@@ -36,7 +36,7 @@ const StaticProfile = (props) => {
                         color="primary"
                         variant="h5"
                     >
-                        @{handle}
+                        {handle}
                     </MuiLink>
                     <hr />
                     {bio && <Typography variant="body2">{bio}</Typography>}
@@ -58,7 +58,7 @@ const StaticProfile = (props) => {
                         </Fragment>
                     )}
                     <CalendarToday color="primary" />{' '}
-                    <span>Joined {dayjs(createdAt).format('MMM YYYY')}</span>
+                    <span> Приєднався {dayjs(createdAt).format('MMM YYYY')}</span>
                 </div>
             </div>
         </Paper>

@@ -1,45 +1,47 @@
 export default {
     palette: {
         primary: {
-            light: '#33c9dc',
-            main: '#00bcd4',
-            dark: '#008394',
+            light: '#a0d3dc',
+            main: '#7a80d4',
+            dark: '#948474',
             contrastText: '#fff'
         },
         secondary: {
             light: '#ff6333',
-            main: '#ff3d00',
+            main: 'rgba(178,0,9,0.78)',
             dark: '#b22a00',
             contrastText: '#fff'
         }
     },
-    typography: {
-        useNextVariants: true
-    },
-    form: {
-        textAlign: 'center'
-    },
-    image: {
-        margin: '20px auto 20px auto'
-    },
-    pageTitle: {
-        margin: '10px auto 10px auto'
-    },
-    textField: {
-        margin: '10px auto 10px auto'
-    },
-    button: {
-        marginTop: 20,
-        position: 'relative'
-    },
-    customError: {
-        color: 'red',
-        fontSize: '0.8rem',
-        marginTop: 10
-    },
-    progress: {
-        position: 'absolute'
-    },
+        spreadThis: {
+            typography: {
+                useNextVariants: true
+            },
+            form: {
+                textAlign: 'center'
+            },
+            image: {
+                margin: '1px auto 1px auto'
+            },
+            pageTitle: {
+                margin: '10px auto 10px auto'
+            },
+            textField: {
+                margin: '10px auto 10px auto'
+            },
+            button: {
+                marginTop: 20,
+                position: 'relative'
+            },
+            customError: {
+                color: 'red',
+                fontSize: '0.8rem',
+                marginTop: 10
+            },
+            progress: {
+                position: 'absolute'
+            },
+        },
     invisibleSeparator: {
         border: 'none',
         margin: 4
@@ -47,10 +49,10 @@ export default {
     visibleSeparator: {
         width: '100%',
         borderBottom: '1px solid rgba(0,0,0,0.1)',
-        marginBottom: 20
+        marginBottom: 10
     },
     paper: {
-        padding: 20
+        padding: 20,
     },
     profile: {
         '& .image-wrapper': {
@@ -94,4 +96,5 @@ export default {
             margin: '20px 10px'
         }
     }
+
 };
