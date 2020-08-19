@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import withStyles from '@material-ui/core/styles/withStyles';
 import PropTypes from 'prop-types';
-import AppIcon from '../images/logo2.png';
+import AppIcon from '../images/logo3obv.png';
 import { Link } from 'react-router-dom';
 
 // MUI Stuff
@@ -10,6 +10,7 @@ import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import CircularProgress from '@material-ui/core/CircularProgress';
+import Card from '@material-ui/core/Card';
 // Redux stuff
 import { connect } from 'react-redux';
 import { loginUser } from '../redux/actions/userActions';
@@ -53,35 +54,37 @@ class login extends Component {
         const { errors } = this.state;
 
         return (
-            <Grid container className={classes.form}>
-                <Grid item sm />
-                <Grid item sm>
+            <Card className={classes.form}>
                     <img src={AppIcon} alt="logo" className={classes.image} />
-                    <form noValidate onSubmit={this.handleSubmit}>
+                    <form noValidate autoComplete="off" onSubmit={this.handleSubmit}>
                         <TextField
-                            id="email"
+                            id="standard-multiline-flexible"
                             name="email"
                             type="email"
+                            multiline
+                            rowsMax={1}
                             label="Введіть e-mail"
                             className={classes.textField}
                             helperText={errors.email}
                             error={errors.email ? true : false}
                             value={this.state.email}
                             onChange={this.handleChange}
-                            fullWidth
                         />
+                        <br/>
                         <TextField
-                            id="password"
+                            id="standard-multiline-flexible"
                             name="password"
                             type="password"
+                            multiline
+                            rowsMax={1}
                             label="Введіть пароль"
                             className={classes.textField}
                             helperText={errors.password}
                             error={errors.password ? true : false}
                             value={this.state.password}
                             onChange={this.handleChange}
-                            fullWidth
                         />
+                        <br/>
                         {errors.general && (
                             <Typography variant="body2" className={classes.customError}>
                                 {errors.general}
@@ -105,9 +108,7 @@ class login extends Component {
                             Все ще не з нами? Авторизуйтесь <Link to="/signup">тут</Link>
                         </middle>
                     </form>
-                </Grid>
-                <Grid item sm />
-            </Grid>
+            </Card>
         );
     }
 }

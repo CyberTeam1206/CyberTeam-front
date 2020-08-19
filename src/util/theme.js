@@ -1,16 +1,16 @@
 export default {
     palette: {
         primary: {
-            light: '#a0d3dc',
-            main: '#7a80d4',
-            dark: '#948474',
-            contrastText: '#fff'
+            light: '#611dc6',
+            main: 'rgba(25,119,242,0.84)',
+            dark: '#1977f2',
+            contrastText: '#f4fdfc'
         },
         secondary: {
-            light: '#ff6333',
-            main: 'rgba(178,0,9,0.78)',
-            dark: '#b22a00',
-            contrastText: '#fff'
+            light: '#419961',
+            main: 'rgba(220,39,39,0.88)',
+            dark: 'rgba(66,183,42,0.97)',
+            contrastText: '#f0f2f5'
         }
     },
         spreadThis: {
@@ -18,7 +18,10 @@ export default {
                 useNextVariants: true
             },
             form: {
-                textAlign: 'center'
+                textAlign: 'center',
+                maxWidth: 500,
+                maxHeight: 700,
+                borderRadius: 50
             },
             image: {
                 margin: '1px auto 1px auto'
@@ -27,7 +30,8 @@ export default {
                 margin: '10px auto 10px auto'
             },
             textField: {
-                margin: '10px auto 10px auto'
+                margin: '10px auto 10px auto',
+
             },
             button: {
                 marginTop: 20,

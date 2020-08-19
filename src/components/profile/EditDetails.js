@@ -67,7 +67,7 @@ class EditDetails extends Component {
         return (
             <Fragment>
                 <MyButton
-                    tip="Редагувати"
+                    tip="Edit"
                     onClick={this.handleOpen}
                     btnClassName={classes.button}
                 >
@@ -88,7 +88,7 @@ class EditDetails extends Component {
                                 label="Про себе"
                                 multiline
                                 rows="3"
-                                placeholder="Розкажіть коротко про себе"
+                                placeholder="Tell about yourself"
                                 className={classes.textField}
                                 value={this.state.bio}
                                 onChange={this.handleChange}
@@ -97,8 +97,8 @@ class EditDetails extends Component {
                             <TextField
                                 name="website"
                                 type="text"
-                                label="Веб-сайт"
-                                placeholder="Вкажіть вебсайт"
+                                label="Website"
+                                placeholder="Enter your website"
                                 className={classes.textField}
                                 value={this.state.website}
                                 onChange={this.handleChange}
@@ -107,8 +107,8 @@ class EditDetails extends Component {
                             <TextField
                                 name="location"
                                 type="text"
-                                label="Місцезнаходження"
-                                placeholder="Звідки ви?"
+                                label="Location"
+                                placeholder="Where are you from?"
                                 className={classes.textField}
                                 value={this.state.location}
                                 onChange={this.handleChange}
@@ -118,10 +118,10 @@ class EditDetails extends Component {
                     </DialogContent>
                     <DialogActions>
                         <Button onClick={this.handleClose} color="primary">
-                            Скасувати
+                            Cancel
                         </Button>
                         <Button onClick={this.handleSubmit} color="primary">
-                            Зберегти
+                            Save
                         </Button>
                     </DialogActions>
                 </Dialog>

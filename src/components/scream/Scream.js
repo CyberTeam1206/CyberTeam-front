@@ -22,14 +22,20 @@ const styles = {
     card: {
         position: 'relative',
         display: 'flex',
-        marginBottom: 20
+        marginBottom: 20,
+        maxWidth: 750
     },
     image: {
-        minWidth: 200
+        marginTop: 20,
+        marginLeft: 20,
+        marginBottom: 20,
+        minWidth: 180,
+        minHeight: 180,
+        maxHeight: 180,
+        borderRadius:40
     },
     content: {
-        padding: 25,
-        objectFit: 'cover'
+        padding: 30
     }
 };
 
@@ -69,7 +75,7 @@ class Scream extends Component {
                         variant="h5"
                         component={Link}
                         to={`/users/${userHandle}`}
-                        color="primary"
+                        color="secondary"
                     >
                         {userHandle}
                     </Typography>
@@ -77,19 +83,21 @@ class Scream extends Component {
                     <Typography variant="body2" color="textSecondary">
                         {dayjs(createdAt).fromNow()}
                     </Typography>
-                    <Typography variant="body1">{body}</Typography>
-                    <LikeButton screamId={screamId} />
-                    <span>{likeCount} вподобання</span>
-                    <MyButton tip="Коментарі">
+                    <Typography variant='subheading'>{body}</Typography>
+                    <br/>
+                    <br/>
+                        <LikeButton screamId={screamId} />
+                        <span>{likeCount} вподобання</span>
+                        <MyButton tip="Коментарі">
                         <ChatIcon color="primary" />
-                    </MyButton>
-                    <span>{commentCount} коментарі</span>
-                    <ScreamDialog
+                         </MyButton>
+                        <span>{commentCount} коментарі</span>
+                        <ScreamDialog
                         screamId={screamId}
                         userHandle={userHandle}
                         openDialog={this.props.openDialog}
-                    />
-                </CardContent>
+                         />
+                    </CardContent>
             </Card>
         );
     }

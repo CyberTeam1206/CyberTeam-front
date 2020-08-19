@@ -30,7 +30,6 @@ class home extends Component {
                 <Grid item lg={8} xs={10}>
                     {recentScreamsMarkup}
                 </Grid>
-
             </Grid>
         );
     }

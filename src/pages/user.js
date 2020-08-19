@@ -52,14 +52,14 @@ class user extends Component {
 
         return (
             <Grid container spacing={16}>
-                <Grid item lg={4} xs={10}>
+                <Grid item lg={3} xs={10}>
                     {this.state.profile === null ? (
                         <ProfileSkeleton />
                     ) : (
                         <StaticProfile profile={this.state.profile} />
                     )}
                 </Grid>
-                <Grid item lg={8} xs={10}>
+                <Grid item lg={8} xs={17}>
                     {screamsMarkup}
                 </Grid>
             </Grid>

@@ -95,7 +95,7 @@ class ScreamDialog extends Component {
 
         const dialogMarkup = loading ? (
             <div className={classes.spinnerDiv}>
-                <CircularProgress size={200} thickness={2} />
+                <CircularProgress size={100} thickness={3} />
             </div>
         ) : (
             <Grid container spacing={16}>

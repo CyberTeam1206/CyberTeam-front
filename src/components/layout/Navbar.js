@@ -7,43 +7,50 @@ import PostScream from '../scream/PostScream';
 import Notifications from './Notification';
 
 //MUI stuff
+
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
-
 import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
+import IconButton from '@material-ui/core/IconButton';
+import FlightTakeoffIcon from '@material-ui/icons/FlightTakeoff';
+
+
+
 
 class Navbar extends Component {
     render() {
         const { authenticated } = this.props;
         return(
-            <AppBar>
-                <Toolbar className="nav-container">
-                    {authenticated ? (
+              <AppBar>
+                  <Toolbar>
+                    { authenticated ? (
                         <Fragment>
+                            <FlightTakeoffIcon />
+                            <IconButton  color="inherit" component={Link} to="/">
+                                TraStory
+                            </IconButton>
+                            <hr/>
                             <PostScream />
-                            <Link to="/">
-                                <MyButton tip="Головна">
-                                    <HomeOutlinedIcon />
-                                </MyButton>
-                            </Link>
                             <Notifications />
                         </Fragment>
                     ) : (
                         <Fragment>
-                            <Button color="inherit" component={Link} to="/login">
-                                Увійти
-                            </Button>
-                            <Button color="inherit" component={Link} to="/">
-                                Головна
-                            </Button>
-                            <Button color="inherit" component={Link} to="/signup">
-                                Авторизація
-                            </Button>
+                            <FlightTakeoffIcon />
+                            <IconButton  color="inherit" component={Link} to="/">
+                            TraStory
+                            </IconButton>
+                            <hr/>
+                            <IconButton color='inherit' component={Link} to='/login'>
+                                Login
+                            </IconButton>
+                            <IconButton color='inherit' component={Link} to='/signup'>
+                                Sign Up
+                            </IconButton>
                         </Fragment>
                     )}
-                </Toolbar>
-            </AppBar>
+                  </Toolbar>
+              </AppBar>
         );
     }
 }
