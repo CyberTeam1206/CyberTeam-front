@@ -18,19 +18,21 @@ export default {
                 useNextVariants: true
             },
             form: {
+                margin: '10px auto 10px auto',
                 textAlign: 'center',
                 maxWidth: 500,
-                maxHeight: 700,
+                minHeight: 550,
                 borderRadius: 50
             },
             image: {
-                margin: '1px auto 1px auto'
+                marginTop: 20,
+                maxWidth: 250
             },
             pageTitle: {
                 margin: '10px auto 10px auto'
             },
             textField: {
-                margin: '10px auto 10px auto',
+                margin: '10px auto 10px auto'
 
             },
             button: {

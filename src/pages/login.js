@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import withStyles from '@material-ui/core/styles/withStyles';
 import PropTypes from 'prop-types';
-import AppIcon from '../images/logo3obv.png';
+import AppIcon from '../images/plane.png';
 import { Link } from 'react-router-dom';
 
 // MUI Stuff
-import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Card from '@material-ui/core/Card';
+import VisibilityOff from '@material-ui/icons/VisibilityOff';
 // Redux stuff
 import { connect } from 'react-redux';
 import { loginUser } from '../redux/actions/userActions';
@@ -58,26 +58,23 @@ class login extends Component {
                     <img src={AppIcon} alt="logo" className={classes.image} />
                     <form noValidate autoComplete="off" onSubmit={this.handleSubmit}>
                         <TextField
-                            id="standard-multiline-flexible"
+                            id="email"
                             name="email"
                             type="email"
-                            multiline
-                            rowsMax={1}
-                            label="Введіть e-mail"
+                            label="Enter e-mail"
                             className={classes.textField}
                             helperText={errors.email}
                             error={errors.email ? true : false}
                             value={this.state.email}
                             onChange={this.handleChange}
+
                         />
                         <br/>
                         <TextField
-                            id="standard-multiline-flexible"
+                            id="password"
                             name="password"
                             type="password"
-                            multiline
-                            rowsMax={1}
-                            label="Введіть пароль"
+                            label="Enter password"
                             className={classes.textField}
                             helperText={errors.password}
                             error={errors.password ? true : false}
@@ -97,15 +94,15 @@ class login extends Component {
                             className={classes.button}
                             disabled={loading}
                         >
-                            Увійти
+                            Login
 
                             {loading && (
                                 <CircularProgress size={30} className={classes.progress} />
                             )}
                         </Button>
-                        <br />
+                        <hr />
                         <middle>
-                            Все ще не з нами? Авторизуйтесь <Link to="/signup">тут</Link>
+                            Still not singed up? Do it <Link to="/signup">HERE</Link>
                         </middle>
                     </form>
             </Card>
